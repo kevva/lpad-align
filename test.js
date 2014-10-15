@@ -11,7 +11,7 @@ test('align words', function (t) {
 	];
 
 	arr.forEach(function (word) {
-		t.assert(align(word, arr, 4).length === 12);
+		t.assert(align(word, arr, 4).length === 13);
 	});
 
 	t.end();

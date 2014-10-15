@@ -14,5 +14,5 @@ var max = require('max-component');
 
 module.exports = function (str, arr, indent) {
 	var len = max(arr, '.length');
-	return lpad(str, new Array(indent + len - str.length).join(' '));
+	return lpad(str, new Array(indent + 1 + len - str.length).join(' '));
 };
