@@ -1,0 +1,30 @@
+{
+  "name": "lpad-align",
+  "version": "1.0.0",
+  "description": "Left pad a string to align with the longest string in an array",
+  "license": "MIT",
+  "repository": "kevva/lpad-align",
+  "author": {
+    "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "https://github.com/kevva"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+  ],
+  "dependencies": {
+    "lpad": "^1.0.0",
+    "max-component": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.0.4"
+  }
+}
