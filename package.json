@@ -19,6 +19,9 @@
     "index.js"
   ],
   "keywords": [
+    "align",
+    "indent",
+    "lpad"
   ],
   "dependencies": {
     "longest": "^0.2.1",
