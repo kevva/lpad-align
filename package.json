@@ -1,6 +1,6 @@
 {
   "name": "lpad-align",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Left pad a string to align with the longest string in an array",
   "license": "MIT",
   "repository": "kevva/lpad-align",
