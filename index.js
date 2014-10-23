@@ -1,7 +1,7 @@
 'use strict';
 
+var longest = require('longest');
 var lpad = require('lpad');
-var max = require('max-component');
 
 /**
  * Left pad a string to align with the longest string in an array
@@ -13,6 +13,6 @@ var max = require('max-component');
  */
 
 module.exports = function (str, arr, indent) {
-	var len = max(arr, '.length');
+	var len = longest(arr).length;
 	return lpad(str, new Array(indent + 1 + len - str.length).join(' '));
 };

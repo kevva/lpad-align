@@ -21,8 +21,8 @@
   "keywords": [
   ],
   "dependencies": {
-    "lpad": "^1.0.0",
-    "max-component": "^1.0.0"
+    "longest": "^0.2.1",
+    "lpad": "^1.0.0"
   },
   "devDependencies": {
     "ava": "^0.0.4"
