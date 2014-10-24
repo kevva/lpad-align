@@ -16,3 +16,17 @@ test('align words', function (t) {
 
 	t.end();
 });
+
+test('align words without indent', function (t) {
+	var arr = [
+		'foo',
+		'foobar',
+		'foobarcat'
+	];
+
+	arr.forEach(function (word) {
+		t.assert(align(word, arr).length === 9);
+	});
+
+	t.end();
+});
