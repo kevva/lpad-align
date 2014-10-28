@@ -13,7 +13,7 @@ var lpad = require('lpad');
  */
 
 module.exports = function (str, arr, indent) {
-	if (!arr || !Array.isArray(arr)) {
+	if (!Array.isArray(arr)) {
 		throw new Error('`arr` is required');
 	}
 
