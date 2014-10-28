@@ -30,3 +30,12 @@ test('align words without indent', function (t) {
 
 	t.end();
 });
+
+test('throw error if `arr` is missing', function (t) {
+	try {
+		align('foo');
+	} catch (err) {
+		t.assert(err instanceof Error);
+		t.end();
+	}
+});
