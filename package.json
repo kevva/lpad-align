@@ -24,7 +24,7 @@
     "lpad"
   ],
   "dependencies": {
-    "longest": "^0.2.1",
+    "longest": "^1.0.0",
     "lpad": "^1.0.0"
   },
   "devDependencies": {
