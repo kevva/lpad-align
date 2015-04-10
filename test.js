@@ -1,7 +1,7 @@
 'use strict';
 
-var align = require('./');
 var test = require('ava');
+var align = require('./');
 
 test('align words', function (t) {
 	var arr = [
@@ -11,7 +11,7 @@ test('align words', function (t) {
 	];
 
 	arr.forEach(function (word) {
-		t.assert(align(word, arr, 4).length === 13);
+		t.assert(align(word, arr, 4).length === 13, align(word, arr, 4).length);
 	});
 
 	t.end();
@@ -25,7 +25,7 @@ test('align words without indent', function (t) {
 	];
 
 	arr.forEach(function (word) {
-		t.assert(align(word, arr).length === 9);
+		t.assert(align(word, arr).length === 9, align(word, arr).length);
 	});
 
 	t.end();

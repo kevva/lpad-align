@@ -2,11 +2,13 @@
 
 > Left pad a string to align with the longest string in an array
 
+
 ## Install
 
-```sh
+```
 $ npm install --save lpad-align
 ```
+
 
 ## Usage
 
@@ -29,6 +31,7 @@ words.forEach(function (word) {
 	foobarcat
  */
 ```
+
 
 ## License
 
