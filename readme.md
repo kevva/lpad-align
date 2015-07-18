@@ -33,6 +33,24 @@ words.forEach(function (word) {
 ```
 
 
+## CLI
+
+```
+$ npm install --global lpad-align
+```
+
+```
+  Usage
+    $ cat <file> | lpad-align
+
+  Example
+    $ cat unicorn.txt | lpad-align
+          foo
+       foobar
+    foobarcat
+```
+
+
 ## License
 
 MIT © [Kevin Mårtensson](https://github.com/kevva)

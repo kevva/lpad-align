@@ -5,17 +5,19 @@
   "license": "MIT",
   "repository": "kevva/lpad-align",
   "author": {
-    "name": "Kevin Mårtensson",
     "email": "kevinmartensson@gmail.com",
+    "name": "Kevin Mårtensson",
     "url": "https://github.com/kevva"
   },
   "engines": {
     "node": ">=0.10.0"
   },
+  "bin": "cli.js",
   "scripts": {
     "test": "node test.js"
   },
   "files": [
+    "cli.js",
     "index.js"
   ],
   "keywords": [
@@ -24,8 +26,10 @@
     "lpad"
   ],
   "dependencies": {
+    "get-stdin": "^4.0.1",
     "longest": "^1.0.0",
-    "lpad": "^2.0.1"
+    "lpad": "^2.0.1",
+    "meow": "^3.3.0"
   },
   "devDependencies": {
     "ava": "^0.0.4"
