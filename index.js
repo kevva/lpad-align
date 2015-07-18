@@ -1,5 +1,4 @@
 'use strict';
-
 var longest = require('longest');
 var lpad = require('lpad');
 
