@@ -19,6 +19,7 @@ test('align words without indent', t => {
 	}
 });
 
-test('throw error if `arr` is missing', t => {
-	t.throws(m.bind(null, 'foo'), '`arr` is required');
+test('check arguments', t => {
+	t.throws(m.bind(null, {}), 'Expected a `string`, got `object`');
+	t.throws(m.bind(null, 'abc', 'abc'), 'Expected an `Array`, got `string`');
 });

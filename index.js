@@ -1,12 +1,15 @@
 'use strict';
-var longest = require('longest');
-var lpad = require('lpad');
+const indentString = require('indent-string');
+const longest = require('longest');
 
-module.exports = function (str, arr, indent) {
-	if (!Array.isArray(arr)) {
-		throw new Error('`arr` is required');
+module.exports = (str, arr, indent) => {
+	if (typeof str !== 'string') {
+		throw new TypeError(`Expected a \`string\`, got \`${typeof str}\``);
 	}
 
-	var len = longest(arr).length;
-	return lpad(str, new Array((indent || 0) + 1 + len - str.length).join(' '));
+	if (!Array.isArray(arr)) {
+		throw new TypeError(`Expected an \`Array\`, got \`${typeof arr}\``);
+	}
+
+	return indentString(str, (indent || 0) + longest(arr).length - str.length);
 };

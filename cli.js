@@ -1,27 +1,25 @@
 #!/usr/bin/env node
 'use strict';
-var getStdin = require('get-stdin');
-var meow = require('meow');
-var lpadAlign = require('./');
+const getStdin = require('get-stdin');
+const meow = require('meow');
+const lpadAlign = require('./');
 
-var cli = meow({
-	help: [
-		'Usage',
-		'  $ cat <file> | lpad-align',
-		'',
-		'Example',
-		'  $ cat unicorn.txt | lpad-align',
-		'        foo',
-		'     foobar',
-		'  foobarcat'
-	]
-});
+const cli = meow(`
+	Usage
+	  $ cat <file> | lpad-align
 
-getStdin(function (data) {
-	var indent = cli.flags.indent || 4;
-	var arr = data.split(/\r?\n/);
+	Example
+	  $ cat unicorn.txt | lpad-align
+	        foo
+	     foobar
+	  foobarcat
+`);
 
-	arr.forEach(function (el) {
-		console.log(lpadAlign(el, arr, indent));
-	});
+getStdin().then(data => {
+	const indent = cli.flags.indent || 4;
+	const arr = data.split(/\r?\n/);
+
+	for (const x of arr) {
+		console.log(lpadAlign(x, arr, indent));
+	}
 });
