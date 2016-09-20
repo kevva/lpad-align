@@ -11,7 +11,7 @@
   },
   "bin": "cli.js",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && ava"
@@ -26,9 +26,9 @@
     "lpad"
   ],
   "dependencies": {
-    "get-stdin": "^4.0.1",
-    "indent-string": "^2.1.0",
-    "longest": "^1.0.0",
+    "get-stdin": "^5.0.1",
+    "indent-string": "^3.0.0",
+    "longest": "^2.0.0",
     "meow": "^3.3.0"
   },
   "devDependencies": {
