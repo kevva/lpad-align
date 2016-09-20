@@ -5,14 +5,14 @@
   "license": "MIT",
   "repository": "kevva/lpad-align",
   "author": {
-    "email": "kevinmartensson@gmail.com",
     "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
     "url": "https://github.com/kevva"
   },
+  "bin": "cli.js",
   "engines": {
     "node": ">=0.10.0"
   },
-  "bin": "cli.js",
   "scripts": {
     "test": "node test.js"
   },
