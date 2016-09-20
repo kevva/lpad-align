@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 'use strict';
-var path = require('path');
 var getStdin = require('get-stdin');
 var meow = require('meow');
 var lpadAlign = require('./');

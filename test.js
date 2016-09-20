@@ -1,40 +1,24 @@
-'use strict';
-var test = require('ava');
-var align = require('./');
+import test from 'ava';
+import m from './';
 
-test('align words', function (t) {
-	var arr = [
-		'foo',
-		'foobar',
-		'foobarcat'
-	];
+const fixture = [
+	'foo',
+	'foobar',
+	'foobarcat'
+];
 
-	arr.forEach(function (word) {
-		t.assert(align(word, arr, 4).length === 13, align(word, arr, 4).length);
-	});
-
-	t.end();
-});
-
-test('align words without indent', function (t) {
-	var arr = [
-		'foo',
-		'foobar',
-		'foobarcat'
-	];
-
-	arr.forEach(function (word) {
-		t.assert(align(word, arr).length === 9, align(word, arr).length);
-	});
-
-	t.end();
-});
-
-test('throw error if `arr` is missing', function (t) {
-	try {
-		align('foo');
-	} catch (err) {
-		t.assert(err instanceof Error);
-		t.end();
+test('align words', t => {
+	for (const x of fixture) {
+		t.is(m(x, fixture, 4).length, 13);
 	}
+});
+
+test('align words without indent', t => {
+	for (const x of fixture) {
+		t.is(m(x, fixture).length, 9);
+	}
+});
+
+test('throw error if `arr` is missing', t => {
+	t.throws(m.bind(null, 'foo'), '`arr` is required');
 });
