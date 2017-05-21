@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
 const fixture = [
 	'foo',
@@ -19,7 +19,7 @@ test('align words without indent', t => {
 	}
 });
 
-test('check arguments', t => {
+test('accepts a string and array', t => {
 	t.throws(m.bind(null, {}), 'Expected a `string`, got `object`');
 	t.throws(m.bind(null, 'abc', 'abc'), 'Expected an `Array`, got `string`');
 });

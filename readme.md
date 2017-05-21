@@ -33,6 +33,30 @@ for (const x of words) {
 ```
 
 
+## API
+
+### lpadAlign(string, array, pad)
+
+#### string
+
+Type: `string`
+
+String that will be padded.
+
+#### array
+
+Type: `Array`
+
+Array to align against.
+
+#### pad
+
+Type: `number`<br>
+Default: `4`
+
+Indentation to prepend the string with.
+
+
 ## CLI
 
 ```
