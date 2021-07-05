@@ -1,5 +1,6 @@
-import test from 'ava';
-import m from '.';
+'use strict';
+const test = require('ava');
+const lpadAlign = require('.');
 
 const fixture = [
 	'foo',
@@ -9,17 +10,25 @@ const fixture = [
 
 test('align words', t => {
 	for (const x of fixture) {
-		t.is(m(x, fixture, 4).length, 13);
+		t.is(lpadAlign(x, fixture, 4).length, 13);
 	}
 });
 
 test('align words without indent', t => {
 	for (const x of fixture) {
-		t.is(m(x, fixture).length, 9);
+		t.is(lpadAlign(x, fixture).length, 9);
 	}
 });
 
 test('accepts a string and array', t => {
-	t.throws(m.bind(null, {}), 'Expected a `string`, got `object`');
-	t.throws(m.bind(null, 'abc', 'abc'), 'Expected an `Array`, got `string`');
+	const error1 = t.throws(() => {
+		lpadAlign({});
+	});
+
+	const error2 = t.throws(() => {
+		lpadAlign('foo', 'bar');
+	});
+
+	t.is(error1.message, 'Expected a `string`, got `object`');
+	t.is(error2.message, 'Expected an `Array`, got `string`');
 });

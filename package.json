@@ -33,6 +33,6 @@
   },
   "devDependencies": {
     "ava": "*",
-    "xo": "*"
+    "xo": "^0.39.1"
   }
 }

@@ -2,13 +2,11 @@
 
 > Left pad a string to align with the longest string in an array
 
-
 ## Install
 
 ```
-$ npm install --save lpad-align
+$ npm install lpad-align
 ```
-
 
 ## Usage
 
@@ -32,10 +30,9 @@ for (const x of words) {
  */
 ```
 
-
 ## API
 
-### lpadAlign(string, array, pad)
+### lpadAlign(string, array, indent)
 
 #### string
 
@@ -49,13 +46,12 @@ Type: `Array`
 
 Array to align against.
 
-#### pad
+#### indent
 
-Type: `number`<br>
+Type: `number`\
 Default: `4`
 
 Indentation to prepend the string with.
-
 
 ## CLI
 
@@ -73,8 +69,3 @@ $ npm install --global lpad-align
        foobar
     foobarcat
 ```
-
-
-## License
-
-MIT © [Kevin Mårtensson](https://github.com/kevva)

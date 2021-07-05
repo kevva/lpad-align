@@ -21,9 +21,9 @@ const cli = meow(`
 
 getStdin().then(data => {
 	const indent = cli.flags.indent || 4;
-	const arr = data.split(/\r?\n/);
+	const array = data.split(/\r?\n/);
 
-	for (const x of arr) {
-		console.log(lpadAlign(x, arr, indent));
+	for (const x of array) {
+		console.log(lpadAlign(x, array, indent));
 	}
 });

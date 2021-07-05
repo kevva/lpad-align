@@ -2,16 +2,16 @@
 const indentString = require('indent-string');
 const longest = require('longest');
 
-module.exports = (str, arr, indent) => {
+module.exports = (string, array, indent) => {
 	const pad = typeof indent === 'number' ? indent : 0;
 
-	if (typeof str !== 'string') {
-		throw new TypeError(`Expected a \`string\`, got \`${typeof str}\``);
+	if (typeof string !== 'string') {
+		throw new TypeError(`Expected a \`string\`, got \`${typeof string}\``);
 	}
 
-	if (!Array.isArray(arr)) {
-		throw new TypeError(`Expected an \`Array\`, got \`${typeof arr}\``);
+	if (!Array.isArray(array)) {
+		throw new TypeError(`Expected an \`Array\`, got \`${typeof array}\``);
 	}
 
-	return indentString(str, pad + longest(arr).length - str.length);
+	return indentString(string, pad + longest(array).length - string.length);
 };
